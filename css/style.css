@@ -1,4 +1,3 @@
-/* Website template by freewebsitetemplates.com */
 /*------------------------- Fonts ---------------------------*/
 @font-face {
 	font-family: 'bevanregular';
@@ -10,7 +9,7 @@
 /*------------------------- Layout styles ------------------------*/
 body {
 	margin:0;
-	background:url(../images/bg-body.png) repeat-x left top;
+	background-color: black;
 	font-family:Arial, Helvetica, sans-serif;
 }
 a {
@@ -72,6 +71,47 @@ a img {
 .header ul li.selected a, .header ul li a:hover {
 	background: rgba(124, 145, 158, 1);
 }
+/*------------------------- Splash Text --------------------*/
+#motd {
+    color: #FFFF00;
+    font-size: 14;
+    text-shadow:3px 3px #3F3F00;
+    padding: 0px;
+	margin-top: 0px;
+	margin-left: 200px;
+    position: absolute;
+}
+.pop {
+    animation: pop 0.58s infinite;
+    -webkit-animation: pop 0.58s infinite;
+}
+@keyframes pop {
+    from {
+        transform:scale(0.95)
+    }
+    50% {
+        transform:scale(1)
+    }
+    to {
+        transform:scale(0.95)
+    }
+}
+@-webkit-keyframes pop {
+    from {
+        -webkit-transform:scale(0.95)
+    }
+    50% {
+        -webkit-transform:scale(1)
+    }
+    to {
+        -webkit-transform:scale(0.95)
+    }
+}
+.tilt {
+    -ms-transform: rotate(-8deg);
+    -webkit-transform: rotate(-8deg);
+    transform: rotate(-8deg);
+}
 /*------------------------- Body ---------------------------*/
 .body {
 	background:url(../images/bg-content.png) no-repeat left bottom #fbfbf4;
@@ -129,7 +169,7 @@ a img {
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:16px;
 	line-height:18px;
-	margin:27px 32px 0 0;
+	margin:30px 30px 0 0;
 	width:50%;
 }
 .body.home div:first-child div div:first-child {
@@ -161,6 +201,10 @@ a img {
 	font-family:Arial Black, Helvetica, sans-serif;
 	font-size:12px;
 	text-transform:uppercase;
+	text-decoration:none;
+}
+.body.home div:first-child div div:first-child span a:hover {
+	text-decoration:underline;
 }
 .body.home div:first-child div div:first-child ul {
 	clear:both;
@@ -170,12 +214,12 @@ a img {
 	padding:7px 0 0;
 }
 .body.home div:first-child div div:first-child ul li {
-	background:none #1f1f1f;
-	border:0;
+	background:none;
+	border:1px solid #dcdbdb;
 	float:left;
 	margin:0 0 0 20px;
 	min-height:293px;
-	padding:10px 10px 0;
+	padding:10px 9px;
 	width:200px;
 }
 .body.home div:first-child div {
@@ -210,6 +254,10 @@ a img {
 	font-family:Arial Black, Helvetica, sans-serif;
 	font-size:12px;
 	text-transform:uppercase;
+	text-decoration:none;
+}
+.body.home div:first-child div div span a:hover{
+	text-decoration:underline;
 }
 .body.home div:first-child div div ul {
 	clear:both;
@@ -247,7 +295,7 @@ a img {
 	width:220px;
 }
 .body.home div.sidebar div {
-	background:none repeat scroll 0 0 #1F1F1F;
+	background:none repeat scroll 0 0 #B1B1B1;
 	float:none;
 	margin:0 0 15px;
 	overflow:hidden;
@@ -261,7 +309,7 @@ a img {
 	float:left;
 	min-height:1159px;
 	padding:0 0 57px;
-	width:716px;
+	width:700px;
 }
 .body.news div:first-child span {
 	background:url(../images/icons.png) no-repeat 20px -373px #030303;
@@ -369,7 +417,7 @@ a img {
 	float:left;
 	min-height:1169px;
 	padding:0 0 19px;
-	width:716px;
+	width:700px;
 }
 .body.news-single div:first-child span:first-child {
 	background:url(../images/icons.png) no-repeat scroll 20px -373px #030303;
@@ -573,7 +621,7 @@ a img {
 .body.team-single div:first-child div {
 	clear:both;
 	overflow:hidden;
-	padding:18px 20px 13px 17px;
+	padding:18px 0px 0px 17px
 }
 .body.team-single div:first-child div span:first-child {
 	background:none;
@@ -625,7 +673,7 @@ a img {
 	float:left;
 	min-height:1159px;
 	padding:0 0 24px;
-	width:716px;
+	width:700px;
 }
 .body.videos div:first-child span {
 	background:url(../images/icons.png) no-repeat scroll 20px -458px #030303;
@@ -685,7 +733,7 @@ a img {
 	float:left;
 	min-height:1179px;
 	padding:0 0 9px;
-	width:716px;
+	width:700px;
 }
 .body.about div:first-child div {
 	clear:both;
@@ -716,7 +764,7 @@ a img {
 	float:left;
 	min-height:1159px;
 	padding:0 0 0px;
-	width:716px;
+	width:700px;
 }
 .body.schedule div:first-child span:first-child {
 	background:url(../images/icons.png) no-repeat scroll 20px -502px #030303;
@@ -856,14 +904,14 @@ a img {
 	text-decoration:underline;
 }
 .body.home div:first-child div div:first-child ul li p, .body.videos div:first-child div.section ul li p {
-	color:#fbfbf4;
+	color:#555;
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:12px;
 	line-height:18px;
 	margin:1px 0 4px;
 }
 .body.home div.sidebar .news, .body.news div.sidebar .news, .body.news-single div.sidebar .news, .body.team div.sidebar .news, .body.team-single div.sidebar .news, .body.videos div.sidebar .news, .body.about div.sidebar .news, .body.schedule div.sidebar .news {
-	background:none #1f1f1f;
+	background:none #B1B1B1;
 	float:none;
 	margin:0 0 15px;
 	overflow:hidden;
@@ -874,7 +922,7 @@ a img {
 	background:url(../images/icons.png) no-repeat 19px -60px #AFD9F1;
 	color:#1f1f1f;
 	display:block;
-	font-family:Arial Black, Helvetica, sans-serif
+	font-family:Arial Black, Helvetica, sans-serif;
 	font-size:15px;
 	height:47px;
 	line-height:44px;
@@ -892,12 +940,12 @@ a img {
 .body.home div.sidebar .news ul li, .body.news div.sidebar .news ul li, .body.news-single div.sidebar .news ul li, .body.team div.sidebar .news ul li, .body.team-single div.sidebar .news ul li, .body.videos div.sidebar .news ul li, .body.about div.sidebar .news ul li, .body.schedule div.sidebar .news ul li {
 	background:url(../images/bg-list.png) repeat-x left bottom;
 	height:54px;
-	padding:0 20px;
+	padding:0 15px;
 	border:0;
 }
 .body.home div.sidebar .news ul li a, .body.news div.sidebar .news ul li a, .body.news-single div.sidebar .news ul li a, .body.team div.sidebar .news ul li a, .body.team-single div.sidebar .news ul li a, .body.videos div.sidebar .news ul li a, .body.about div.sidebar .news ul li a, .body.schedule div.sidebar .news ul li a {
 	background:url(../images/icon-arrow-right.png) no-repeat left 6px;
-	color:#fff;
+	color:#000;
 	display:inline-block;
 	float:none;
 	font-family:Arial, Helvetica, sans-serif;
@@ -921,19 +969,20 @@ a img {
 	height: auto;
 }
 .body.home div.sidebar .news a, .body.home div.sidebar .section a, .body.news div.sidebar .news a, .body.news div.sidebar .section a, .body.news-single div.sidebar .news a, .body.news-single div.sidebar .section a, .body.team div.sidebar .news a, .body.team div.sidebar .section a, .body.team-single div.sidebar .news a, .body.team-single div.sidebar .section a, .body.videos div.sidebar .news a, .body.videos div.sidebar .section a, .body.about div.sidebar .news a, .body.about div.sidebar .section a, .body.schedule div.sidebar .news a, .body.schedule div.sidebar .section a {
-	color:#AFD9F1;
+	color:#ECECEC;
 	float:right;
 	font-family:"Arial Black", Gadget, sans-serif;
 	font-size:10px;
 	line-height:18px;
 	margin:2px 20px 4px 0;
 	text-transform:uppercase;
+	text-decoration:none;
 }
 .body.home div.sidebar .news > a:hover, .body.home div.sidebar .section > a:hover, .body.news div.sidebar .news > a:hover, .body.news div.sidebar .section > a:hover, .body.news-single div.sidebar .news > a:hover, .body.news-single div.sidebar .section > a:hover, .body.team div.sidebar .news > a:hover, .body.team div.sidebar .section > a:hover, .body.team-single div.sidebar .news > a:hover, .body.team-single div.sidebar .section > a:hover, .body.videos div.sidebar .news > a:hover, .body.videos div.sidebar .section > a:hover, .body.about div.sidebar .news > a:hover, .body.about div.sidebar .section > a:hover, .body.schedule div.sidebar .news > a:hover, .body.schedule div.sidebar .section > a:hover, .body.home div.sidebar div > a:hover, .body.news div.sidebar div > a:hover, .body.news-single div.sidebar div > a:hover, .body.team div.sidebar div > a:hover, .body.team-single div.sidebar div > a:hover, .body.schedule div.sidebar div > a:hover, .body.videos div.sidebar div > a:hover {
-	color:#ff9c00;
+	text-decoration:underline;
 }
 .body.home div.sidebar .section, .body.news div.sidebar .section, .body.news-single div.sidebar .section, .body.team div.sidebar .section, .body.team-single div.sidebar .section, .body.videos div.sidebar .section, .body.about div.sidebar .section, .body.schedule div.sidebar .section {
-	background:none repeat scroll 0 0 #1F1F1F;
+	background:none repeat scroll 0 0 #B1B1B1;
 	float:none;
 	overflow:hidden;
 	width:220px;
@@ -948,6 +997,7 @@ a img {
 	line-height:44px;
 	padding:0 0 0 47px;
 	text-transform:uppercase;
+	text-decoration:none;
 }
 .body.home div.sidebar .section ul, .body.news div.sidebar .section ul, .body.news-single div.sidebar .section ul, .body.team div.sidebar .section ul, .body.team-single div.sidebar .section ul, .body.videos div.sidebar .section ul, .body.about div.sidebar .section ul, .body.schedule div.sidebar .section ul {
 	list-style:none outside none;
@@ -957,10 +1007,10 @@ a img {
 .body.home div.sidebar .section ul li, .body.news div.sidebar .section ul li, .body.news-single div.sidebar .section ul li, .body.team div.sidebar .section ul li, .body.team-single div.sidebar .section ul li, .body.videos div.sidebar .section ul li, .body.about div.sidebar .section ul li, .body.schedule div.sidebar .section ul li {
 	background:url(../images/bg-list.png) repeat-x scroll left bottom transparent;
 	height:54px;
-	padding:0 20px;
+	padding:0 15px;
 }
 .body.home div.sidebar .section ul li a, .body.news div.sidebar .section ul li a, .body.news-single div.sidebar .section ul li a, .body.team div.sidebar .section ul li a, .body.team-single div.sidebar .section ul li a, .body.videos div.sidebar .section ul li a, .body.about div.sidebar .section ul li a, .body.schedule div.sidebar .section ul li a {
-	color:#fff;
+	color:#000;
 	display:inline-block;
 	float:none;
 	font-family:Arial, Helvetica, sans-serif;
@@ -999,12 +1049,12 @@ a img {
 	padding:0;
 }
 .body.home div.sidebar div ul li:hover, .body.news div.sidebar div ul li:hover, .body.news-single div.sidebar div ul li:hover, .body.team div.sidebar div ul li:hover, .body.team-single div.sidebar div ul li:hover, .body.videos div.sidebar div ul li:hover, .body.about div.sidebar div ul li:hover, .body.schedule div.sidebar div ul li:hover {
-	background:url(../images/bg-list-hover.png) repeat-x left bottom #2b2b2b;
+	background:url(../images/bg-list-hover.png) repeat-x left bottom #D3D3D3;
 }
 .body.home div.sidebar div ul li, .body.news div.sidebar div ul li, .body.news-single div.sidebar div ul li, .body.team div.sidebar div ul li, .body.team-single div.sidebar div ul li, .body.videos div.sidebar div ul li, .body.about div.sidebar div ul li, .body.schedule div.sidebar div ul li {
-	background:url(../images/bg-list.png) repeat-x left bottom #1f1f1f;
+	background:url(../images/bg-list.png) repeat-x left bottom #ECECEC;
 	height:auto;
-	padding:0 20px;
+	padding:0 15px;
 }
 .body.home div.sidebar div ul li p, .body.news div.sidebar div ul li p, .body.news-single div.sidebar div ul li p, .body.team div.sidebar div ul li p, .body.team-single div.sidebar div ul li p, .body.videos div.sidebar div ul li p, .body.about div.sidebar div ul li p, .body.schedule div.sidebar div ul li p {
 	background:url(../images/icon-arrow-right.png) no-repeat scroll left 17px transparent;
@@ -1016,7 +1066,7 @@ a img {
 	padding:12px 0 14px 10px;
 }
 .body.home div.sidebar div ul li p a, .body.news div.sidebar div ul li p a, .body.news-single div.sidebar div ul li p a, .body.team div.sidebar div ul li p a, .body.team-single div.sidebar div ul li p a, .body.videos div.sidebar div ul li p a, .body.about div.sidebar div ul li p a, .body.schedule div.sidebar div ul li p a {
-	color:#fff;
+	color:#000;
 	font-size:12px;
 	font-weight:700;
 	line-height:18px;
@@ -1028,22 +1078,24 @@ a img {
 	font-family: Arial,Helvetica,sans-serif;
 }
 .body.home div.sidebar div a, .body.news div.sidebar div a, .body.news-single div.sidebar div a, .body.team div.sidebar div a, .body.team-single div.sidebar div a, .body.videos div.sidebar div a, .body.about div.sidebar div a, .body.schedule div.sidebar div a {
-	color:#2B9CFF;
+	color:#ECECEC;
 	float:right;
 	font-family:"Arial Black", Gadget, sans-serif;
 	font-size:10px;
 	line-height:18px;
 	margin:2px 20px 4px 0;
 	text-transform:uppercase;
+	text-decoration:none;
 }
 .body.news, .body.news-single, .body.team, .body.team-single, .body.videos, .body.about, .body.schedule {
 	overflow:hidden;
 }
 .body.news div:first-child ul li div p a:hover, .body.news-single div:first-child div p a:hover, .body.news-single div:first-child div.section p a:hover, .body.team div:first-child div p a:hover {
 	color:#2B9CFF;
+	text-decoration: underline;
 }
 .body.news div.sidebar, .body.news-single div.sidebar, .body.team div.sidebar, .body.team-single div.sidebar, .body.videos div.sidebar, .body.about div.sidebar, .body.schedule div.sidebar {
-	background:none #030303;
+	background:none;
 	float:right;
 	width:220px;
 }
@@ -1079,7 +1131,7 @@ a img {
 	float:left;
 	min-height:1159px;
 	padding:0 0 29px;
-	width:716px;
+	width:700px;
 }
 .body.team div:first-child span:first-child, .body.team-single div:first-child span, .body.about div:first-child span:first-child {
 	background:url(../images/icons.png) no-repeat scroll 20px -417px #030303;
